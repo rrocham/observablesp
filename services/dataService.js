@@ -1,6 +1,6 @@
 const { sp } = require('../sp');
 
-exports.getWebInfo = function() {
+exports.getWebInfo = function () {
     const selector = [
         'Created',
         'Description',
@@ -15,7 +15,7 @@ exports.getWebInfo = function() {
     //Promise.reject(new Error('Something bad happened...'))
 }
 
-exports.getWebLists = function() {
+exports.getWebLists = function () {
     const selector = [
         'BaseTemplate',
         'BaseType',
@@ -33,7 +33,11 @@ exports.getWebLists = function() {
     return sp.web.lists.select(...selector).get();
 }
 
-exports.getContentTypes = function() {
+exports.getContentTypes = function () {
     const selector = [];
     return sp.web.contentTypes.get();
+}
+
+exports.searchWeb = function (search) {
+    return sp.search({ Querytext: search, TrimDuplicates: true });
 }
