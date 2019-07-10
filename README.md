@@ -1,6 +1,6 @@
 # Introduction
 
-This project provides the back-end for a [Observable](https://observablehq.com/) notebook implemented using Azure Functions.
+This project provides the back-end for this [Observable](https://observablehq.com/@rrocham/sharepoint-data-visualization) notebook, it was implemented using Azure Functions.
 
 # Configuration
 
