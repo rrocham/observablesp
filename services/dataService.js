@@ -34,8 +34,15 @@ exports.getWebLists = function () {
 }
 
 exports.getContentTypes = function () {
-    const selector = [];
-    return sp.web.contentTypes.get();
+    const selector = [
+        'Description',
+        'Group',
+        'Hidden',
+        'Name',
+        'ReadOnly',
+        'StringId'
+    ];
+    return sp.web.contentTypes.select(...selector).get();
 }
 
 exports.searchWeb = function (search) {
