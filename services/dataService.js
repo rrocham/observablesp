@@ -45,6 +45,16 @@ exports.getContentTypes = function () {
     return sp.web.contentTypes.select(...selector).get();
 }
 
+exports.getListItems = function (listTitle, options = {}) {
+    const { orderBy = 'Id', ascending = true, top = null } = options;
+    const listItems = sp.web.lists.getByTitle(listTitle).items.orderBy(orderBy, ascending);
+    if (top) {
+        return listItems.top(top).get();
+    } else {
+        return listItems.getAll();
+    }
+}
+
 exports.searchWeb = function (search) {
     return sp.search({ Querytext: search, TrimDuplicates: true });
 }

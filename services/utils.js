@@ -14,7 +14,8 @@ exports.responseToError = function responseToError(context) {
     return function (error) {
         context.log.error(error);
         context.res = {
-            status: 500, body: {
+            status: 500,
+            body: {
                 error: errorMessage(error)
             }
         };
