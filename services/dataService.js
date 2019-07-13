@@ -12,7 +12,6 @@ exports.getWebInfo = function () {
         'WelcomePage'
     ];
     return sp.web.select(...selector).get();
-    //Promise.reject(new Error('Something bad happened...'))
 }
 
 exports.getWebLists = function () {
@@ -53,6 +52,14 @@ exports.getListItems = function (listTitle, options = {}) {
     } else {
         return listItems.getAll();
     }
+}
+
+exports.getSiteUsers = function() {
+    return sp.web.siteUsers.get();
+}
+
+exports.getSiteGroups = function() {
+    return sp.web.siteGroups.expand('users').get();
 }
 
 exports.searchWeb = function (search) {

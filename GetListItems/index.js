@@ -7,7 +7,6 @@ module.exports = async function (context, req) {
     const orderBy = req.query.orderBy;
     const ascending = req.query.ascending && req.query.ascending.toLowerCase() !== 'false';
     const top = req.query.top;
-    context.log(req.query);
 
     return svc.getListItems(listTitle, { orderBy, top, ascending })
                 .then(responseToJson(context))
