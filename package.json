@@ -10,7 +10,7 @@
   "dependencies": {
     "@pnp/common": "^1.3.3",
     "@pnp/logging": "^1.3.3",
-    "@pnp/nodejs": "^1.3.2",
+    "@pnp/nodejs": "^2.5.0",
     "@pnp/odata": "^1.3.3",
     "@pnp/sp": "^1.3.3"
   },
